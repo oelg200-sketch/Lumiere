@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lumière Cosmetics — Maquillaje natural y elegante. Productos de belleza que realzan tu piel." />
+  <title>Lumière Cosmetics — Belleza Natural</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <header class="navbar" id="navbar">
+    <nav class="nav-container">
+      <!-- Logo -->
+      <a href="#inicio" class="logo" onclick="closeMobileMenu()">
+        <span class="logo-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/>
+            <path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/>
+          </svg>
+        </span>
+        <span class="logo-text">Lumi<span class="logo-accent">ère</span></span>
+      </a>
+
+      <!-- Desktop links -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#inicio" onclick="closeMobileMenu()">Inicio</a></li>
+        <li><a href="#productos" onclick="closeMobileMenu()">Productos</a></li>
+        <li><a href="#beneficios" onclick="closeMobileMenu()">Beneficios</a></li>
+        <li><a href="#nosotros" onclick="closeMobileMenu()">Nosotros</a></li>
+        <li><a href="#contacto" onclick="closeMobileMenu()">Contacto</a></li>
+      </ul>
+
+      <!-- Desktop social icons -->
+      <div class="nav-social" id="navSocial"></div>
+
+      <!-- Mobile toggle -->
+      <button class="mobile-toggle" id="mobileToggle" onclick="toggleMobileMenu()" aria-label="Abrir menú">
+        <svg id="menuIcon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/>
+        </svg>
+        <svg id="closeIcon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </nav>
+
+    <!-- Mobile menu overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu-links"></div>
+      <div class="mobile-menu-social"></div>
+    </div>
+  </header>
+
+  <!-- ==================== HERO ==================== -->
+  <section id="inicio" class="hero">
+    <div class="hero-blob hero-blob-1"></div>
+    <div class="hero-blob hero-blob-2"></div>
+
+    <div class="hero-container">
+      <!-- Text -->
+      <div class="hero-text" style="animation: fadeUp 0.8s ease-out 0.2s both">
+        <span class="hero-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/>
+          </svg>
+          Cosmética natural · Cruelty-free
+        </span>
+
+        <h1 class="hero-title">
+          Realza tu
+          <span class="gradient-text">belleza natural</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Maquillaje formulado con ingredientes naturales que cuidan tu piel.
+          Descubre productos diseñados para resaltar lo mejor de ti.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#productos" class="btn btn-primary">
+            Ver productos
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </a>
+          <a href="#nosotros" class="btn btn-outline">Conoce la marca</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-number">50+</span>
+            <span class="stat-label">Productos</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Cruelty-free</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-number">Vegan</span>
+            <span class="stat-label">Fórmulas</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image -->
+      <div class="hero-image" style="animation: fadeIn 1s ease-out 0.4s both">
+        <div class="hero-image-glow"></div>
+        <img src="https://images.pexels.com/photos/1124833/pexels-photo-1124833.jpeg?auto=compress&cs=tinysrgb&h=900&w=700" alt="Mujer con maquillaje natural y elegante" />
+
+        <div class="floating-card" style="animation: float 4s ease-in-out infinite">
+          <span class="floating-card-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/>
+            </svg>
+          </span>
+          <div>
+            <p class="floating-card-title">Lumière</p>
+            <p class="floating-card-subtitle">Belleza natural</p>
+          </div>
+        </div>
+
+        <div class="floating-tag" style="animation: float 3.5s ease-in-out infinite 0.5s">
+          Nuevo lanzamiento
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PRODUCTS ==================== -->
+  <section id="productos" class="section section-white">
+    <div class="container">
+      <div class="section-heading">
+        <p class="section-eyebrow reveal" data-reveal>Nuestra colección</p>
+        <h2 class="section-title reveal" data-reveal>Productos destacados</h2>
+        <p class="section-description reveal" data-reveal>
+          Fórmulas naturales que cuidan tu piel mientras realzan tu belleza.
+        </p>
+      </div>
+
+      <!-- Category filters -->
+      <div class="filters reveal" data-reveal id="filters"></div>
+
+      <!-- Products grid -->
+      <div class="products-grid" id="productsGrid"></div>
+    </div>
+  </section>
+
+  <!-- ==================== BENEFITS ==================== -->
+  <section id="beneficios" class="section section-gradient">
+    <div class="container">
+      <div class="section-heading">
+        <p class="section-eyebrow reveal" data-reveal>Por qué elegirnos</p>
+        <h2 class="section-title reveal" data-reveal>Belleza que cuida tu piel</h2>
+      </div>
+
+      <div class="benefits-grid" id="benefitsGrid"></div>
+    </div>
+  </section>
+
+  <!-- ==================== ABOUT ==================== -->
+  <section id="nosotros" class="section section-white about-section">
+    <div class="container about-container">
+      <!-- Images -->
+      <div class="about-images reveal" data-reveal data-reveal-anim="fade-left">
+        <img src="https://images.pexels.com/photos/1066109/pexels-photo-1066109.jpeg?auto=compress&cs=tinysrgb&h=900&w=700" alt="Retrato de mujer con maquillaje natural" class="about-img-main" />
+        <img src="https://images.pexels.com/photos/7256109/pexels-photo-7256109.jpeg?auto=compress&cs=tinysrgb&h=600&w=500" alt="Productos de maquillaje en fondo rosa" class="about-img-2" />
+        <img src="https://images.pexels.com/photos/5616974/pexels-photo-5616974.jpeg?auto=compress&cs=tinysrgb&h=400&w=350" alt="Mujer con maquillaje suave" class="about-img-3" />
+        <div class="about-blob about-blob-1"></div>
+        <div class="about-blob about-blob-2"></div>
+      </div>
+
+      <!-- Text -->
+      <div class="about-text reveal" data-reveal data-reveal-anim="fade-right">
+        <p class="section-eyebrow">Nuestra historia</p>
+        <h2 class="about-title">Nacimos para redefinir la belleza</h2>
+        <p class="about-paragraph">
+          Lumière nació en 2019 con una misión clara: crear maquillaje que haga sentir
+          bien por dentro y por fuera. Creemos que la belleza no es un estándar, sino
+          una expresión personal.
+        </p>
+        <p class="about-paragraph about-paragraph-light">
+          Cada producto se formula con ingredientes de origen natural, respetando tu
+          piel y el planeta. Trabajamos con proveedores locales y empaquetamos todo
+          en materiales reciclables.
+        </p>
+
+        <div class="about-stats">
+          <div class="about-stat about-stat-1">
+            <span class="about-stat-number">2019</span>
+            <span class="about-stat-label">Año de fundación</span>
+          </div>
+          <div class="about-stat about-stat-2">
+            <span class="about-stat-number">15+</span>
+            <span class="about-stat-label">Países</span>
+          </div>
+          <div class="about-stat about-stat-3">
+            <span class="about-stat-number">200k</span>
+            <span class="about-stat-label">Clientas felices</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT ==================== -->
+  <section id="contacto" class="section section-contact">
+    <div class="container contact-container">
+      <!-- Left: info + social -->
+      <div class="contact-info reveal" data-reveal data-reveal-anim="fade-left">
+        <p class="section-eyebrow">Contacto</p>
+        <h2 class="contact-title">Hablemos de belleza</h2>
+        <p class="contact-description">
+          ¿Tienes preguntas sobre nuestros productos? ¿Quieres colaborar con nosotros?
+          Escríbenos, nos encantará saber de ti.
+        </p>
+
+        <div class="contact-items" id="contactItems"></div>
+
+        <div class="contact-social-section">
+          <p class="contact-social-label">Síguenos</p>
+          <div class="contact-social" id="contactSocial"></div>
+        </div>
+      </div>
+
+      <!-- Right: newsletter -->
+      <div class="contact-newsletter reveal" data-reveal data-reveal-anim="fade-right">
+        <div class="newsletter-card">
+          <h3 class="newsletter-title">Únete a nuestro boletín</h3>
+          <p class="newsletter-text">
+            Recibe tips de belleza, lanzamientos exclusivos y descuentos especiales
+            directamente en tu correo.
+          </p>
+          <form id="newsletterForm" class="newsletter-form">
+            <input type="email" id="newsletterEmail" required placeholder="Tu correo electrónico" class="newsletter-input" />
+            <button type="submit" class="btn btn-primary newsletter-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+              </svg>
+              Suscribirme
+            </button>
+            <p class="newsletter-success" id="newsletterSuccess">¡Gracias por suscribirte! Revisa tu correo.</p>
+          </form>
+          <p class="newsletter-disclaimer">
+            Al suscribirte aceptas recibir correos de Lumière. Puedes darte de baja en cualquier momento.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <span class="footer-logo-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/>
+            </svg>
+          </span>
+          <span class="footer-logo-text">Lumi<span class="footer-logo-accent">ère</span></span>
+        </div>
+        <p class="footer-tagline">Belleza que nace de la naturaleza. Maquillaje natural, cruelty-free y vegano.</p>
+      </div>
+
+      <div class="footer-links">
+        <p class="footer-heading">Navegación</p>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#beneficios">Beneficios</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-social">
+        <p class="footer-heading">Síguenos</p>
+        <div class="footer-social-icons" id="footerSocial"></div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© <span id="footerYear"></span> Lumière Cosmetics. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
